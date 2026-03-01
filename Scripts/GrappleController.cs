@@ -101,6 +101,12 @@ public class GrappleController : MonoBehaviour
             rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
         }
     }
+    
+    public void ForceRelease()
+    {
+        isGrappling = false;
+        lineRenderer.enabled = false;
+    }
 
     private void UpdateVisuals()
     {
